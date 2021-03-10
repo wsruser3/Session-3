@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn_Screen"
+    android:background="#332973">
+
+    <ImageView
+        android:id="@+id/signin_image_for_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="100dp"
+        android:src="@drawable/project_logo"
+        android:contentDescription="@string/todo" />
+
+    <TextView
+        android:id="@+id/signin_text_for_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_image_for_logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="85dp"
+        android:text="@string/project_name"
+        android:fontFamily="monospace"
+        android:lines="1"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:autoSizeMaxTextSize="45dp"
+        android:autoSizeMinTextSize="35dp"
+        android:textColor="#ef3a01" />
+
+    <EditText
+        android:id="@+id/signin_input_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_text_for_logo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="monospace"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/text_for_signin4"
+        android:textColor="#808080"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/signin_input_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signin_input_email"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="monospace"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="15dp"
+        android:ems="10"
+        android:hint="@string/text_for_signin3"
+        android:inputType="textPassword"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/signin_button_for_register"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="monospace"
+        android:textSize="18sp"
+        android:layout_marginBottom="30dp"
+        android:text="Регистрация"
+        android:textColor="#ef3a01" />
+
+    <Button
+        android:id="@+id/signin_button_for_login"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_above="@+id/signin_button_for_register"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="monospace"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="18sp"
+        android:text="Войти"
+        android:background="#ef3a01"
+        android:textColor="#fff" />
+</RelativeLayout>

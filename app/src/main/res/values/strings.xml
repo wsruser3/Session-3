@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">WorldSinema</string>
+    <string name="todo">TODO</string>
+    <string name="project_name">WorldSinema</string>
+    <string name="text_for_signin1">Войти</string>
+    <string name="text_for_signin2">Регистрация</string>
+    <string name="text_for_signin3">Пароль</string>
+    <string name="text_for_signin4">E-mail</string>
+</resources>
