@@ -1,18 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".main_activity.MainActivity"
+    android:background="#332973" >
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1500dp"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/img_cover_film"
+                android:layout_width="wrap_content"
+                android:layout_height="350dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="0dp"
+                app:srcCompat="@drawable/simple_icon"
+                android:scaleType="centerCrop">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/open_cover_film"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginEnd="125dp"
+                android:background="@drawable/shape_to_view"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:paddingEnd="15dp"
+                android:text="Смотреть"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:alpha="0.8"/>
+
+            <TableLayout
+                android:id="@+id/tablelayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/img_cover_film"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp">
+                    <TableRow>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp" >
+                            <TextView
+                            android:id="@+id/menu_rating"
+                            android:layout_width="140dp"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:text="В тренде"
+                            android:fontFamily="monospace"
+                            android:textColor="#ef3a01"
+                            android:gravity="center"
+                            android:autoSizeTextType="uniform"/>
+
+                            <ImageView
+                                android:id="@+id/image_to_rating"
+                                android:layout_width="140dp"
+                                android:layout_height="4dp"
+                                android:layout_below="@+id/menu_rating"
+                                android:layout_alignParentStart="true"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:visibility="visible"
+                                android:src="#ef3a01" />
+
+                            <TextView
+                                android:id="@+id/menu_new"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:layout_toEndOf="@+id/menu_rating"
+                                android:autoSizeTextType="uniform"
+                                android:fontFamily="monospace"
+                                android:padding="10dp"
+                                android:gravity="center"
+                                android:text="Новое"
+                                android:textColor="#ef3a01" />
+
+                            <ImageView
+                                android:id="@+id/image_to_new"
+                                android:layout_width="140dp"
+                                android:layout_height="4dp"
+                                android:layout_below="@+id/menu_new"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/image_to_rating"
+                                android:visibility="visible"
+                                android:src="#ef3a01" />
+
+                            <TextView
+                                android:id="@+id/menu_for_you"
+                                android:layout_width="140dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:layout_toEndOf="@+id/menu_new"
+                                android:autoSizeTextType="uniform"
+                                android:gravity="center"
+                                android:fontFamily="monospace"
+                                android:padding="10dp"
+                                android:text="Для Вас"
+                                android:textColor="#ef3a01" />
+
+                            <ImageView
+                                android:id="@+id/image_to_for_you"
+                                android:layout_width="140dp"
+                                android:layout_height="4dp"
+                                android:layout_below="@+id/menu_for_you"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_toEndOf="@+id/image_to_new"
+                                android:visibility="visible"
+                                android:src="#ef3a01" />
+                        </RelativeLayout>
+                    </TableRow>
+            </TableLayout>
+            <TableLayout
+                android:id="@+id/tablelayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/tablelayout"
+                android:layout_marginTop="10dp"
+                android:paddingTop="10dp">
+                <TableRow>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/menu_photo_1"
+                            android:layout_width="120dp"
+                            android:layout_height="200dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="10dp"
+                            android:src="#ef3a01" />
+
+                        <ImageView
+                            android:id="@+id/menu_photo_2"
+                            android:layout_width="120dp"
+                            android:layout_height="200dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_toEndOf="@+id/menu_photo_1"
+                            android:src="#ef3a01" />
+
+                        <ImageView
+                            android:id="@+id/menu_photo_3"
+                            android:layout_width="120dp"
+                            android:layout_height="200dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_toEndOf="@+id/menu_photo_2"
+                            android:src="#ef3a01" />
+
+                    </RelativeLayout>
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/text_for_you_watched"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tablelayout1"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="0dp"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:text="Вы смотрели"
+                android:textColor="#ef3a01"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image_for_main_last_video"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_below="@+id/text_for_you_watched"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="#ef3a01" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:layout_weight="1"
+        android:background="#1C1A19">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="0dp"
+            app:menu="@menu/navigation"
+            android:background="#1C1A19"/>
+    </FrameLayout>
+</RelativeLayout>

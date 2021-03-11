@@ -4,68 +4,69 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp_Screen"
+    tools:context=".user_login.SignUp_Screen"
     android:background="#332973">
 
-    <ImageView
-        android:id="@+id/signup_image_for_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="100dp"
-        android:src="@drawable/project_logo"
-        android:contentDescription="@string/todo" />
-
-    <TextView
-        android:id="@+id/signup_text_for_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/signup_image_for_logo"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:fontFamily="monospace"
-        android:layout_marginStart="85dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="85dp"
-        android:text="@string/project_name"
-        android:lines="1"
-        android:textSize="30sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:autoSizeMaxTextSize="45dp"
-        android:autoSizeMinTextSize="35dp"
-        android:textColor="#ef3a01" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/signup_text_for_logo"
-        android:layout_marginTop="25dp">
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
+
+            <ImageView
+                android:id="@+id/signup_image_for_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="100dp"
+                android:contentDescription="@string/todo"
+                android:src="@drawable/project_logo" />
+
+            <TextView
+                android:id="@+id/signup_text_for_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/signup_image_for_logo"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="85dp"
+                android:autoSizeMaxTextSize="45dp"
+                android:autoSizeMinTextSize="35dp"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:lines="1"
+                android:text="@string/project_name"
+                android:textColor="#ef3a01"
+                android:textSize="30sp"
+                android:textStyle="bold" />
 
             <EditText
                 android:id="@+id/signup_input_firstname"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/signup_text_for_logo"
                 android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:fontFamily="monospace"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="10dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Имя" />
+                android:fontFamily="monospace"
+                android:hint="Имя"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/signup_input_lastname"
@@ -79,8 +80,8 @@
                 android:layout_marginEnd="10dp"
                 android:ems="10"
                 android:fontFamily="monospace"
-                android:inputType="textPersonName"
-                android:hint="Фамилия" />
+                android:hint="Фамилия"
+                android:inputType="textPersonName" />
 
             <EditText
                 android:id="@+id/signup_input_email"
@@ -92,10 +93,10 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:fontFamily="monospace"
                 android:ems="10"
-                android:inputType="textEmailAddress"
-                android:hint="E-mail" />
+                android:fontFamily="monospace"
+                android:hint="E-mail"
+                android:inputType="textEmailAddress" />
 
             <EditText
                 android:id="@+id/signup_input_password_one"
@@ -108,9 +109,10 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:ems="10"
-                android:inputType="textPassword"
                 android:fontFamily="monospace"
-                android:hint="Пароль" />
+                android:hint="Пароль"
+                android:inputType="textPassword" />
+
             <EditText
                 android:id="@+id/signup_input_password_two"
                 android:layout_width="wrap_content"
@@ -118,43 +120,52 @@
                 android:layout_below="@+id/signup_input_password_one"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:fontFamily="monospace"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
                 android:ems="10"
-                android:inputType="textPassword"
-                android:hint="Повторите пароль" />
+                android:fontFamily="monospace"
+                android:hint="Повторите пароль"
+                android:inputType="textPassword" />
 
-            <Button
+            <TextView
                 android:id="@+id/signup_button_for_register"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/signup_input_password_two"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="70dp"
                 android:layout_marginEnd="10dp"
-                android:background="#ef3a01"
+                android:layout_marginBottom="70dp"
+                android:background="@drawable/shape_to_view"
                 android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="20dp"
                 android:text="Зарегистрироваться"
-                android:textSize="18sp" />
+                android:textColor="#fff"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
-            <Button
+            <TextView
                 android:id="@+id/signup_button_for_have"
                 android:layout_width="wrap_content"
-                android:layout_height="60dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/signup_button_for_register"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="-30dp"
                 android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_to_view_two"
                 android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="20dp"
                 android:text="У меня уже есть аккаунт"
                 android:textColor="#ef3a01"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
         </RelativeLayout>
     </ScrollView>
